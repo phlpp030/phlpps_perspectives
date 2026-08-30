@@ -1,0 +1,95 @@
+{
+  "articles": [
+    {
+      "slug": "title-of-the-most-recent-article",
+      "title": "title of the most recent article",
+      "tag": "art",
+      "date": "14.06.2026",
+      "posted": "14.06.2026",
+      "excerpt": "a short teaser that gives readers a glimpse of what the article is about — setting the tone before they click through.",
+      "cover": "https://picsum.photos/seed/feat/900/675",
+      "hero": "https://picsum.photos/seed/feat/600/800",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            { "src": "https://picsum.photos/seed/c1a/600/450", "caption": "a quiet moment — the light was softer than expected for that time of day" },
+            { "src": "https://picsum.photos/seed/c1b/600/450", "caption": "the same location, a step to the left — sometimes that's all it takes" },
+            { "src": "https://picsum.photos/seed/c1c/600/450", "caption": "the detail that made the whole frame worth keeping" }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.\n\nUt labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            { "src": "https://picsum.photos/seed/c2a/600/450", "caption": "shot on film — the grain adds something the digital version never quite captures" },
+            { "src": "https://picsum.photos/seed/c2b/600/450", "caption": "the aftermath — an hour later, the light had completely changed" }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.\n\nEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio."
+        }
+      ]
+    },
+    {
+      "slug": "article-two",
+      "title": "article two",
+      "tag": "travel",
+      "date": "01.05.2026",
+      "posted": "01.05.2026",
+      "excerpt": "a short teaser that gives readers a glimpse of what the article is about.",
+      "cover": "https://picsum.photos/seed/arch1/600/450",
+      "hero": "https://picsum.photos/seed/arch1h/600/800",
+      "blocks": [
+        { "type": "text", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+      ]
+    },
+    {
+      "slug": "article-three",
+      "title": "article three",
+      "tag": "city",
+      "date": "15.04.2026",
+      "posted": "15.04.2026",
+      "excerpt": "a short teaser that gives readers a glimpse of what the article is about.",
+      "cover": "https://picsum.photos/seed/arch2/600/450",
+      "hero": "https://picsum.photos/seed/arch2h/600/800",
+      "blocks": [
+        { "type": "text", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+      ]
+    },
+    {
+      "slug": "article-four",
+      "title": "article four",
+      "tag": "film",
+      "date": "01.04.2026",
+      "posted": "01.04.2026",
+      "excerpt": "a short teaser that gives readers a glimpse of what the article is about.",
+      "cover": "https://picsum.photos/seed/arch3/600/450",
+      "hero": "https://picsum.photos/seed/arch3h/600/800",
+      "blocks": [
+        { "type": "text", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+      ]
+    },
+    {
+      "slug": "article-five",
+      "title": "article five",
+      "tag": "portrait",
+      "date": "15.03.2026",
+      "posted": "15.03.2026",
+      "excerpt": "a short teaser that gives readers a glimpse of what the article is about.",
+      "cover": "https://picsum.photos/seed/arch4/600/450",
+      "hero": "https://picsum.photos/seed/arch4h/600/800",
+      "blocks": [
+        { "type": "text", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
+      ]
+    }
+  ]
+}

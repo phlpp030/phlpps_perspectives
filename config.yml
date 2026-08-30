@@ -1,0 +1,105 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: fotos
+public_folder: /fotos
+
+locale: de
+
+collections:
+  - name: articles
+    label: Artikel
+    files:
+      - label: Alle Artikel
+        name: articles
+        file: articles.json
+        fields:
+          - label: Artikel
+            name: articles
+            widget: list
+            fields:
+              - label: URL-Slug
+                name: slug
+                widget: string
+                hint: "Eindeutige URL-Kennung, z.B. 'lissabon-juni-2026' — nur Kleinbuchstaben und Bindestriche"
+              - label: Titel
+                name: title
+                widget: string
+              - label: Tag
+                name: tag
+                widget: string
+                hint: "Kategorie, z.B. 'travel', 'art', 'city'"
+              - label: Aufnahmedatum
+                name: date
+                widget: string
+                hint: "Format: dd.mm.yyyy"
+              - label: Veröffentlicht am
+                name: posted
+                widget: string
+                hint: "Format: dd.mm.yyyy"
+              - label: Auszug (Teaser für Startseite)
+                name: excerpt
+                widget: text
+              - label: Cover-Bild (Startseiten-Kachel, 4:3)
+                name: cover
+                widget: image
+              - label: Hero-Bild (Artikelseite, 3:4)
+                name: hero
+                widget: image
+              - label: Inhalt
+                name: blocks
+                widget: list
+                types:
+                  - label: Textabschnitt
+                    name: text
+                    widget: object
+                    fields:
+                      - label: Text
+                        name: content
+                        widget: text
+                        hint: "Absätze durch eine Leerzeile trennen"
+                  - label: Karussell
+                    name: carousel
+                    widget: object
+                    fields:
+                      - label: Bilder
+                        name: slides
+                        widget: list
+                        fields:
+                          - label: Bild
+                            name: src
+                            widget: image
+                          - label: Bildunterschrift
+                            name: caption
+                            widget: string
+                            required: false
+
+  - name: about
+    label: About-Seite
+    files:
+      - label: About
+        name: about
+        file: about.json
+        fields:
+          - label: Überschrift
+            name: heading
+            widget: string
+          - label: Textabschnitte
+            name: body
+            widget: list
+            hint: "Jeden Absatz einzeln eintragen"
+
+  - name: privacy
+    label: Privacy Policy
+    files:
+      - label: Kontaktdaten
+        name: privacy
+        file: privacy.json
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: E-Mail-Adresse
+            name: email
+            widget: string
