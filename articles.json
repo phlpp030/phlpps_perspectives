@@ -1,7 +1,7 @@
 {
   "articles": [
     {
-      "excerpt": "sharing some photos and impressions from summery berlin fotowalks",
+      "excerpt": "I pushed myself to do some photowalks after regular 9-5 duty and between weekend relaxation and came across some interesting perspectives and berlin summer vibes.",
       "blocks": [
         {
           "type": "text",
@@ -51,7 +51,7 @@
       "cover": "/fotos/dsc07293.jpeg",
       "title": "photo recap: august 2026",
       "tag": "photowalk",
-      "hero": "https://picsum.photos/seed/feat/600/800",
+      "hero": "/fotos/dsc07293.jpeg",
       "posted": "31.08.2026"
     },
     {
