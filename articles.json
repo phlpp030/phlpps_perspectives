@@ -11,16 +11,20 @@
           "type": "carousel",
           "slides": [
             {
-              "src": "https://picsum.photos/seed/c1a/600/450",
-              "caption": "a quiet moment — the light was softer than expected for that time of day"
+              "src": "/fotos/dsc07263.jpeg",
+              "caption": "having a quick look"
             },
             {
-              "src": "https://picsum.photos/seed/c1b/600/450",
-              "caption": "the same location, a step to the left — sometimes that's all it takes"
+              "src": "/fotos/dsc07203.jpeg",
+              "caption": "late afternoon drinks on Oranienstr"
             },
             {
-              "src": "https://picsum.photos/seed/c1c/600/450",
-              "caption": "the detail that made the whole frame worth keeping"
+              "src": "/fotos/dsc07173.jpeg",
+              "caption": "stopping by the notorious voo store"
+            },
+            {
+              "src": "/fotos/dsc07341.jpeg",
+              "caption": "spectacular lighting at Kotti"
             }
           ]
         },
