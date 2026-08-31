@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — phlpp's perspectives</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%236F60DD'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <meta name="theme-color" content="#6F60DD">
+  <style>
+    @font-face { font-family:'Jost'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/jost-400.woff2') format('woff2'); }
+    @font-face { font-family:'Jost'; font-style:normal; font-weight:800; font-display:swap; src:url('./fonts/jost-800.woff2') format('woff2'); }
+
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+
+    :root {
+      --bg: #F7F7F7; --ink: #131210; --muted: #9B9489;
+      --accent: #6F60DD; --pad: 48px; --article-inset: 0px;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif;
+      min-height: 100vh;
+    }
+
+    .page-wrap { max-width: 900px; margin: 0 auto; width: 100%; }
+
+    /* ── Circle header ── */
+    .article-header { display: flex; justify-content: center; padding: 36px 0 32px; }
+    .article-header-circle {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--accent); display: block;
+      transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+    }
+    .article-header-circle:hover { transform: scale(.88); }
+
+    /* ── Content wrap ── */
+    .content-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px var(--pad) 80px;
+    }
+
+    /* ── Return ── */
+    .article-return {
+      display: block;
+      font-size: 13px; font-weight: 400;
+      letter-spacing: .06em; text-transform: lowercase;
+      color: var(--muted); text-decoration: none;
+      transition: color .2s ease;
+      margin-bottom: 44px;
+    }
+    .article-return:hover { color: var(--ink); }
+
+    /* ── Page title ── */
+    .page-title {
+      font-size: clamp(28px, 5.5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1.05;
+      text-transform: lowercase;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .page-updated {
+      font-size: 12px; font-weight: 400;
+      letter-spacing: .06em; text-transform: lowercase;
+      color: var(--muted);
+      margin-bottom: 52px;
+    }
+
+    /* ── Sections ── */
+    .privacy-section { margin-bottom: 40px; }
+
+    .section-label {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px; font-weight: 400;
+      line-height: 1.75; color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin: 0 0 12px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      font-size: 16px; font-weight: 400;
+      line-height: 1.75; color: var(--ink);
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    a.external {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a.external:hover { text-decoration: underline; }
+
+    /* ── Placeholder styling ── */
+    .placeholder {
+      background: #ffe9b3;
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-style: italic;
+      color: #7a5200;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+      padding: 0 var(--pad);
+      margin: 48px 0 60px;
+    }
+    .footer-left { display: flex; align-items: center; gap: 12px; justify-content: flex-end; }
+    .footer-link { font-size: 11px; font-weight: 400; letter-spacing: .05em; text-transform: lowercase; color: var(--muted); text-decoration: none; transition: color .2s ease; }
+    .footer-link:hover { color: var(--ink); }
+    .footer-emoji { font-size: 28px; line-height: 1; user-select: none; }
+    .footer-copy { font-size: 11px; font-weight: 400; letter-spacing: .05em; text-transform: lowercase; color: var(--muted); justify-self: start; }
+
+    /* ── Responsive ── */
+    @media (max-width: 760px) {
+      :root { --article-inset: 16px; }
+      .content-wrap {
+        padding-left: calc(var(--pad) - var(--article-inset));
+        padding-right: calc(var(--pad) - var(--article-inset));
+      }
+    }
+    @media (max-width: 520px) {
+      :root { --pad: 24px; }
+      .article-header { padding-top: 28px; padding-bottom: 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="article-header">
+    <a href="index.html" class="article-header-circle" aria-label="Back to start"></a>
+  </header>
+
+  <main class="content-wrap">
+
+    <a href="index.html" class="article-return">return</a>
+
+    <h1 class="page-title">privacy policy</h1>
+    <p class="page-updated">last updated: june 2026</p>
+
+    <div class="privacy-section">
+      <p class="section-label">1. controller</p>
+      <p>
+        The controller responsible for data processing on this website within the meaning of the
+        General Data Protection Regulation (GDPR) is:<br><br>
+        <span class="placeholder" id="privacyName">[Your Name]</span><br>
+        <span class="placeholder" id="privacyEmail1">[your-email@example.com]</span>
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">2. hosting</p>
+      <p>
+        This website is hosted by Netlify, Inc., 512 2nd Street, Suite 200,
+        San Francisco, CA 94107, USA.
+      </p>
+      <p>
+        When you visit this website, Netlify automatically records technical data in server log
+        files. This includes your IP address, browser type and version, operating system,
+        the page requested, and the date and time of your visit. This data is required for the
+        technical operation and security of the website and is not merged with other data sources.
+      </p>
+      <p>
+        Legal basis: Article 6(1)(f) GDPR — legitimate interest in the technically secure and
+        stable operation of this website.
+      </p>
+      <p>
+        Netlify may process this data in the United States. For more information, see
+        <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener" class="external">netlify.com/privacy</a>.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">3. fonts</p>
+      <p>
+        This website uses the Jost typeface. The font files are hosted directly on our own
+        server. No data is transferred to third parties when the font is loaded.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">4. cookies</p>
+      <p>
+        This website does not use cookies. No information is stored in your browser beyond
+        what is technically necessary for the page to load.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">5. analytics and tracking</p>
+      <p>
+        This website does not use any analytics tools, tracking pixels, or third-party
+        monitoring technologies. Your browsing behaviour on this site is not recorded.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">6. external links</p>
+      <p>
+        This website contains a link to Instagram (instagram.com). Clicking this link will take
+        you to an external website with its own privacy policy. We have no influence over the
+        data processing practices of external websites.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">7. admin area</p>
+      <p>
+        This website uses Netlify Identity for administrative access. This service stores the
+        operator's email address and an encrypted password for login purposes only. Visitors
+        to the public website are not affected by this.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">8. your rights</p>
+      <p>Under the GDPR, you have the following rights regarding your personal data:</p>
+      <ul>
+        <li>Right of access — Art. 15 GDPR</li>
+        <li>Right to rectification — Art. 16 GDPR</li>
+        <li>Right to erasure — Art. 17 GDPR</li>
+        <li>Right to restriction of processing — Art. 18 GDPR</li>
+        <li>Right to data portability — Art. 20 GDPR</li>
+        <li>Right to object — Art. 21 GDPR</li>
+      </ul>
+      <p>
+        To exercise any of these rights, please contact us at
+        <span class="placeholder" id="privacyEmail2">[your-email@example.com]</span>.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <p class="section-label">9. right to lodge a complaint</p>
+      <p>
+        You have the right to lodge a complaint with a data protection supervisory authority.
+        In Germany, the competent authority is the data protection authority of your federal
+        state (Landesdatenschutzbehörde). A list of all German supervisory authorities can
+        be found at
+        <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener" class="external">bfdi.bund.de</a>.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <a href="/privacy.html" class="footer-link">privacy</a>
+      <a href="/imprint.html" class="footer-link">imprint</a>
+    </div>
+    <span class="footer-emoji">💌</span>
+    <span class="footer-copy">© 2026 phlpp</span>
+  </footer>
+
+</div>
+<script>
+  fetch('./privacy.json')
+    .then(r => r.json())
+    .then(data => {
+      const fields = {
+        privacyName:   data.name  || '',
+        privacyEmail1: data.email || '',
+        privacyEmail2: data.email || '',
+      };
+      Object.entries(fields).forEach(([id, value]) => {
+        const el = document.getElementById(id);
+        if (!el || !value) return;
+        el.textContent = value;
+        el.classList.remove('placeholder');
+      });
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
