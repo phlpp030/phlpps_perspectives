@@ -38,12 +38,37 @@
             {
               "src": "/fotos/dsc07839.jpeg",
               "caption": "scenery with some Oscar Niemeyer in the background"
+            },
+            {
+              "src": "/fotos/dsc07847-2.jpeg",
+              "caption": "sharp edges"
+            },
+            {
+              "src": "/fotos/dsc07799.jpeg",
+              "caption": "station"
             }
           ]
         },
         {
           "type": "text",
           "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.\n\nEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc07963.jpeg",
+              "caption": "Friday aperitivo"
+            },
+            {
+              "src": "/fotos/dsc07950.jpeg",
+              "caption": "taking out the dog"
+            },
+            {
+              "src": "/fotos/dsc07920.jpeg",
+              "caption": "color coordination"
+            }
+          ]
         }
       ],
       "slug": "august-2026-recap",
