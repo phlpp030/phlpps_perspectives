@@ -55,15 +55,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 44px var(--pad) 24px;
-      gap: 16px;
+      padding: 36px var(--pad) 18px;
+      gap: 12px;
     }
  
     .site-title {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 4px;
+      gap: 2px;
       font-size: clamp(26px, 5vw, 44px);
       font-weight: 800;
       letter-spacing: -0.03em;
@@ -74,9 +74,9 @@
  
     .header-unit {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      gap: 20px;
+      gap: 12px;
       width: 100%;
     }
  
@@ -100,7 +100,7 @@
       text-transform: lowercase;
       color: var(--muted);
       white-space: nowrap;
-      margin-top: 5px;
+      margin-top: 2px;
       /* font-size and margin-left set by JS */
     }
  
@@ -191,7 +191,7 @@
     }
  
     .article-title {
-      font-size: clamp(18px, 2.6vw, 28px);
+      font-size: clamp(22px, 4.5vw, 40px);
       font-weight: 800;
       letter-spacing: -0.02em;
       line-height: 1.12;
@@ -211,7 +211,7 @@
     }
  
     .read-more {
-      font-size: 12px;
+      font-size: 15px;
       font-weight: 800;
       letter-spacing: 0.04em;
       text-transform: lowercase;
@@ -260,7 +260,14 @@
     }
  
     .article-tags {
-      display: none; /* desktop: hidden — only shown on mobile via @media */
+      display: none;
+    }
+ 
+    /* tags visible in featured text column on desktop */
+    .featured-text .article-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
     }
  
     .thumb-overlay {
@@ -378,8 +385,8 @@
       background: rgba(247, 247, 247, 0.18);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 7px;
+      padding-bottom: 7px;
     }
  
     header.minimized .title-block {
@@ -389,7 +396,7 @@
     }
  
     header.minimized .header-circle {
-      transform: scale(1.18);
+      transform: scale(0.62);
     }
  
     header.minimized .header-unit {
@@ -552,17 +559,23 @@
       return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
  
+    function renderTags(tags) {
+      const arr = Array.isArray(tags) ? tags : (tags ? [tags] : []);
+      return arr.map(t => `<span class="article-tag">${esc(t)}</span>`).join('');
+    }
+ 
     function renderFeatured(a) {
       const el = document.getElementById('featuredArticle');
       if (!el) return;
       const link = `article.html?slug=${encodeURIComponent(a.slug)}`;
+      const firstTag = (a.tags || [])[0] || '';
       el.innerHTML = `
         <a href="${link}" class="featured-img">
           <img src="${esc(a.cover)}" alt="${esc(a.title)}" loading="lazy">
-          <span class="article-tag">${esc(a.tag)}</span>
+          ${firstTag ? `<span class="article-tag">${esc(firstTag)}</span>` : ''}
         </a>
         <div class="featured-text">
-          <div class="article-tags"><span class="article-tag">${esc(a.tag)}</span></div>
+          <div class="article-tags">${renderTags(a.tags)}</div>
           <span class="article-date">${esc(a.posted)}</span>
           <a href="${link}" class="article-title">${esc(a.title)}</a>
           <p class="article-excerpt">${esc(a.excerpt)}</p>
@@ -576,6 +589,7 @@
       grid.innerHTML = '';
       articles.forEach(a => {
         const link = `article.html?slug=${encodeURIComponent(a.slug)}`;
+        const firstTag = (a.tags || [])[0] || '';
         const el = document.createElement('a');
         el.href = link;
         el.className = 'archive-thumb';
@@ -583,12 +597,14 @@
           <div class="thumb-img-wrap">
             <img src="${esc(a.cover)}" alt="${esc(a.title)}" loading="lazy">
             <div class="thumb-overlay"><span class="thumb-title">${esc(a.title)}</span></div>
-            <span class="article-tag">${esc(a.tag)}</span>
+            ${firstTag ? `<span class="article-tag">${esc(firstTag)}</span>` : ''}
           </div>
           <div class="thumb-info">
-            <div class="article-tags"><span class="article-tag">${esc(a.tag)}</span></div>
+            <div class="article-tags">${renderTags(a.tags)}</div>
+            <span class="article-date">${esc(a.posted)}</span>
             <h3 class="thumb-headline">${esc(a.title)}</h3>
             <p class="thumb-excerpt">${esc(a.excerpt)}</p>
+            <a href="${link}" class="read-more">read more</a>
           </div>`;
         grid.appendChild(el);
       });
