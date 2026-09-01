@@ -559,23 +559,29 @@
       return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
  
-    function renderTags(tags) {
-      const arr = Array.isArray(tags) ? tags : (tags ? [tags] : []);
-      return arr.map(t => `<span class="article-tag">${esc(t)}</span>`).join('');
+    function getTagsArr(a) {
+      return Array.isArray(a.tags) ? a.tags
+           : a.tags ? [a.tags]
+           : a.tag  ? [a.tag]
+           : [];
+    }
+ 
+    function renderTags(a) {
+      return getTagsArr(a).map(t => `<span class="article-tag">${esc(t)}</span>`).join('');
     }
  
     function renderFeatured(a) {
       const el = document.getElementById('featuredArticle');
       if (!el) return;
       const link = `article.html?slug=${encodeURIComponent(a.slug)}`;
-      const firstTag = (a.tags || [])[0] || '';
+      const firstTag = getTagsArr(a)[0] || '';
       el.innerHTML = `
         <a href="${link}" class="featured-img">
           <img src="${esc(a.cover)}" alt="${esc(a.title)}" loading="lazy">
           ${firstTag ? `<span class="article-tag">${esc(firstTag)}</span>` : ''}
         </a>
         <div class="featured-text">
-          <div class="article-tags">${renderTags(a.tags)}</div>
+          <div class="article-tags">${renderTags(a)}</div>
           <span class="article-date">${esc(a.posted)}</span>
           <a href="${link}" class="article-title">${esc(a.title)}</a>
           <p class="article-excerpt">${esc(a.excerpt)}</p>
@@ -589,7 +595,7 @@
       grid.innerHTML = '';
       articles.forEach(a => {
         const link = `article.html?slug=${encodeURIComponent(a.slug)}`;
-        const firstTag = (a.tags || [])[0] || '';
+        const firstTag = getTagsArr(a)[0] || '';
         const el = document.createElement('a');
         el.href = link;
         el.className = 'archive-thumb';
@@ -600,7 +606,7 @@
             ${firstTag ? `<span class="article-tag">${esc(firstTag)}</span>` : ''}
           </div>
           <div class="thumb-info">
-            <div class="article-tags">${renderTags(a.tags)}</div>
+            <div class="article-tags">${renderTags(a)}</div>
             <span class="article-date">${esc(a.posted)}</span>
             <h3 class="thumb-headline">${esc(a.title)}</h3>
             <p class="thumb-excerpt">${esc(a.excerpt)}</p>
