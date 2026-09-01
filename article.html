@@ -11,71 +11,72 @@
   <style>
     @font-face { font-family:'Jost'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/jost-400.woff2') format('woff2'); }
     @font-face { font-family:'Jost'; font-style:normal; font-weight:800; font-display:swap; src:url('./fonts/jost-800.woff2') format('woff2'); }
-
+ 
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-
+ 
     :root {
       --bg: #F7F7F7; --ink: #131210; --muted: #9B9489;
       --accent: #6F60DD; --pad: 48px; --article-inset: 0px;
     }
-
+ 
     html, body { background:var(--bg); color:var(--ink); font-family:'Jost','Futura','Century Gothic',sans-serif; min-height:100vh; }
-
+ 
     .page-wrap { max-width:900px; margin:0 auto; width:100%; }
-
+ 
     /* ── Circle header ── */
     .article-header { display:flex; justify-content:center; padding:36px 0 32px; }
     .article-header-circle { width:48px; height:48px; border-radius:50%; background:var(--accent); display:block; transition:transform .35s cubic-bezier(.34,1.56,.64,1); }
     .article-header-circle:hover { transform:scale(.88); }
-
+ 
     /* ── Article wrap ── */
     .article-wrap { max-width:680px; margin:0 auto; padding:20px var(--pad) 80px; }
-
+ 
     /* ── Return ── */
     .article-return { display:block; font-size:13px; font-weight:400; letter-spacing:.06em; text-transform:lowercase; color:var(--muted); text-decoration:none; transition:color .2s ease; }
     .article-return:hover { color:var(--ink); }
     .article-return-top    { margin-bottom:44px; }
     .article-return-bottom { margin-top:64px; }
-
+ 
     /* ── Meta ── */
     .article-meta { display:flex; flex-direction:column; align-items:center; gap:16px; margin-bottom:16px; }
     .article-tag  { background:rgba(220,218,214,.68); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border-radius:20px; padding:5px 14px; font-size:13px; font-weight:600; letter-spacing:.07em; text-transform:lowercase; color:var(--ink); }
+    .article-tags-row { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
     .article-pub-date { font-size:13px; font-weight:400; letter-spacing:.06em; text-transform:lowercase; color:var(--muted); }
-
+ 
     /* ── Headline ── */
     .article-headline { font-size:clamp(28px,5.5vw,52px); font-weight:800; letter-spacing:-.03em; line-height:1.05; text-transform:lowercase; text-align:center; color:var(--ink); margin-bottom:48px; }
-
+ 
     /* ── Hero ── */
     .article-hero { aspect-ratio:3/4; overflow:hidden; background:#E0DDD6; margin-bottom:52px; }
     .article-hero img { width:100%; height:100%; object-fit:cover; display:block; }
-
+ 
     /* ── Body ── */
     .article-body { font-size:17px; font-weight:400; line-height:1.8; color:var(--ink); }
     .article-body p { margin-bottom:28px; }
-
+ 
     /* ── Carousel ── */
     .article-figure { margin:52px 0; }
-
+ 
     .carousel-viewport { position:relative; overflow:hidden; background:#E0DDD6; min-height:100px; cursor:grab; }
     .carousel-viewport:active { cursor:grabbing; }
-
+ 
     .carousel-track { display:flex; transition:transform .42s cubic-bezier(.25,.46,.45,.94); will-change:transform; }
-
+ 
     .carousel-slide { flex:0 0 100%; min-width:0; }
     .carousel-slide img { width:100%; height:auto; display:block; pointer-events:none; }
-
+ 
     .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); width:32px; height:32px; border-radius:50%; background:rgba(247,247,247,.82); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:14px; color:var(--ink); z-index:2; line-height:1; transition:opacity .25s ease; }
     .carousel-btn:hover { background:rgba(247,247,247,.96); }
     .carousel-prev { left:10px; }
     .carousel-next { right:10px; }
     .carousel-btn[disabled] { opacity:0; pointer-events:none; }
-
+ 
     .carousel-dots { display:flex; justify-content:center; gap:5px; margin-top:10px; }
     .carousel-dot { width:5px; height:5px; border-radius:50%; background:var(--muted); opacity:.3; border:none; padding:0; cursor:pointer; transition:opacity .2s ease; }
     .carousel-dot.active { opacity:1; }
-
-    .article-caption { display:block; font-size:13px; font-weight:400; letter-spacing:.05em; text-transform:lowercase; color:var(--muted); margin-top:20px; padding-top:16px; border-top:.5px solid rgba(155,148,137,.35); min-height:2.2em; }
-
+ 
+    .article-caption { display:block; font-size:13px; font-weight:400; letter-spacing:.03em; color:var(--muted); margin-top:20px; padding-top:16px; border-top:.5px solid rgba(155,148,137,.35); min-height:2.2em; }
+ 
     /* ── Footer ── */
     .site-footer { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:16px; padding:0 var(--pad); margin:48px 0 60px; }
     .footer-left { display:flex; align-items:center; gap:12px; justify-content:flex-end; }
@@ -83,44 +84,46 @@
     .footer-link:hover { color:var(--ink); }
     .footer-emoji { font-size:28px; line-height:1; user-select:none; }
     .footer-copy { font-size:11px; font-weight:400; letter-spacing:.05em; text-transform:lowercase; color:var(--muted); justify-self:start; }
-
+ 
     /* ── Responsive ── */
     @media (max-width:760px) {
       :root { --article-inset:16px; }
-      .article-wrap { padding-left:calc(var(--pad) - var(--article-inset)); padding-right:calc(var(--pad) - var(--article-inset)); }
+      .article-wrap { padding-left:32px; padding-right:32px; }
     }
     @media (max-width:520px) {
       :root { --pad:24px; }
+      .article-wrap { padding-left:24px; padding-right:24px; }
       .article-header { padding-top:28px; padding-bottom:24px; }
+    }
     }
   </style>
 </head>
 <body>
 <div class="page-wrap">
-
+ 
   <header class="article-header">
     <a href="index.html" class="article-header-circle" aria-label="Back to start"></a>
   </header>
-
+ 
   <main class="article-wrap">
     <a href="index.html" class="article-return article-return-top">return</a>
-
+ 
     <div class="article-meta">
-      <span class="article-tag" id="artTag"></span>
+      <div class="article-tags-row" id="artTag"></div>
       <span class="article-pub-date" id="artDate"></span>
     </div>
-
+ 
     <h1 class="article-headline" id="artTitle"></h1>
-
+ 
     <div class="article-hero">
       <img id="artHero" src="" alt="">
     </div>
-
+ 
     <div class="article-body" id="artBody"></div>
-
+ 
     <a href="index.html" class="article-return article-return-bottom">return</a>
   </main>
-
+ 
   <footer class="site-footer">
     <div class="footer-left">
       <a href="/privacy.html" class="footer-link">privacy</a>
@@ -129,20 +132,20 @@
     <span class="footer-emoji">💌</span>
     <span class="footer-copy">© 2026 phlpp</span>
   </footer>
-
+ 
 </div>
 <script>
   // ── Karussell ───────────────────────────────────────────────
   function buildCarousel(slides) {
     const figure = document.createElement('figure');
     figure.className = 'article-figure';
-
+ 
     const viewport = document.createElement('div');
     viewport.className = 'carousel-viewport';
-
+ 
     const track = document.createElement('div');
     track.className = 'carousel-track';
-
+ 
     slides.forEach(slide => {
       const div = document.createElement('div');
       div.className = 'carousel-slide';
@@ -153,33 +156,33 @@
       div.appendChild(img);
       track.appendChild(div);
     });
-
+ 
     const prevBtn = document.createElement('button');
     prevBtn.className = 'carousel-btn carousel-prev';
     prevBtn.setAttribute('aria-label', 'Previous');
     prevBtn.textContent = '←';
-
+ 
     const nextBtn = document.createElement('button');
     nextBtn.className = 'carousel-btn carousel-next';
     nextBtn.setAttribute('aria-label', 'Next');
     nextBtn.textContent = '→';
-
+ 
     viewport.appendChild(track);
     viewport.appendChild(prevBtn);
     viewport.appendChild(nextBtn);
     figure.appendChild(viewport);
-
+ 
     const dotsDiv = document.createElement('div');
     dotsDiv.className = 'carousel-dots';
     figure.appendChild(dotsDiv);
-
+ 
     const caption = document.createElement('figcaption');
     caption.className = 'article-caption';
     figure.appendChild(caption);
-
+ 
     return figure;
   }
-
+ 
   function initCarousels() {
     document.querySelectorAll('.article-figure').forEach(figure => {
       const viewport = figure.querySelector('.carousel-viewport');
@@ -191,7 +194,7 @@
       const dotsWrap = figure.querySelector('.carousel-dots');
       const caption  = figure.querySelector('.article-caption');
       let current = 0;
-
+ 
       slides.forEach((_, i) => {
         const dot = document.createElement('button');
         dot.className = 'carousel-dot';
@@ -199,13 +202,13 @@
         dot.addEventListener('click', () => goTo(i));
         dotsWrap.appendChild(dot);
       });
-
+ 
       if (slides.length <= 1) {
         prevBtn.style.display = 'none';
         nextBtn.style.display = 'none';
         dotsWrap.style.display = 'none';
       }
-
+ 
       function goTo(idx) {
         current = Math.max(0, Math.min(idx, slides.length - 1));
         track.style.transform = `translateX(-${current * 100}%)`;
@@ -214,57 +217,65 @@
         prevBtn.disabled = current === 0;
         nextBtn.disabled = current === slides.length - 1;
       }
-
+ 
       prevBtn.addEventListener('click', () => goTo(current - 1));
       nextBtn.addEventListener('click', () => goTo(current + 1));
-
+ 
       let sx = 0, st = 0;
       viewport.addEventListener('touchstart', e => { sx = e.touches[0].clientX; st = Date.now(); }, { passive: true });
       viewport.addEventListener('touchend', e => {
         const dx = sx - e.changedTouches[0].clientX;
         if (Math.abs(dx) > 30 && Date.now() - st < 400) dx > 0 ? goTo(current + 1) : goTo(current - 1);
       }, { passive: true });
-
+ 
       viewport.setAttribute('tabindex', '0');
       viewport.addEventListener('keydown', e => {
         if (e.key === 'ArrowLeft')  goTo(current - 1);
         if (e.key === 'ArrowRight') goTo(current + 1);
       });
-
+ 
       goTo(0);
     });
   }
-
+ 
   // ── Artikel laden ───────────────────────────────────────────
   const slug = new URLSearchParams(window.location.search).get('slug');
-
+ 
   fetch('./articles.json')
     .then(r => r.json())
     .then(data => {
       const articles = Array.isArray(data) ? data : (data.articles || []);
       const article  = articles.find(a => a.slug === slug);
-
+ 
       if (!article) {
         document.title = 'not found — phlpp\'s perspectives';
         document.getElementById('artTitle').textContent = 'article not found';
         return;
       }
-
+ 
       // Meta
       document.title = `${article.title} — phlpp's perspectives`;
-      document.getElementById('artTag').textContent   = article.tag   || '';
+      const tags = Array.isArray(article.tags) ? article.tags : (article.tags ? [article.tags] : []);
+      const tagEl = document.getElementById('artTag');
+      tagEl.innerHTML = '';
+      tags.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'article-tag';
+        span.textContent = t;
+        tagEl.appendChild(span);
+      });
       document.getElementById('artDate').textContent  = article.date  || '';
       document.getElementById('artTitle').textContent = article.title || '';
-
+ 
       // Hero
       const hero = document.getElementById('artHero');
       hero.src = article.hero || '';
       hero.alt = article.title || '';
-
+ 
       // Blocks
       const body = document.getElementById('artBody');
       body.innerHTML = '';
-
+ 
       (article.blocks || []).forEach(block => {
         if (block.type === 'text') {
           (block.content || '').split('\n\n').filter(p => p.trim()).forEach(text => {
@@ -276,7 +287,7 @@
           body.appendChild(buildCarousel(block.slides || []));
         }
       });
-
+ 
       initCarousels();
     })
     .catch(err => { console.warn('articles.json nicht gefunden:', err); });
