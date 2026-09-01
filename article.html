@@ -41,6 +41,7 @@
     .article-meta { display:flex; flex-direction:column; align-items:center; gap:16px; margin-bottom:16px; }
     .article-tag  { background:rgba(220,218,214,.68); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border-radius:20px; padding:5px 14px; font-size:13px; font-weight:600; letter-spacing:.07em; text-transform:lowercase; color:var(--ink); }
     .article-tags-row { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
+    .article-tags-row .article-tag { position:static; pointer-events:auto; display:inline-block; }
     .article-pub-date { font-size:13px; font-weight:400; letter-spacing:.06em; text-transform:lowercase; color:var(--muted); }
  
     /* ── Headline ── */
@@ -255,7 +256,10 @@
  
       // Meta
       document.title = `${article.title} — phlpp's perspectives`;
-      const tags = Array.isArray(article.tags) ? article.tags : (article.tags ? [article.tags] : []);
+      const tags = Array.isArray(article.tags) ? article.tags
+                 : article.tags ? [article.tags]
+                 : article.tag  ? [article.tag]
+                 : [];
       const tagEl = document.getElementById('artTag');
       tagEl.innerHTML = '';
       tags.forEach(t => {
