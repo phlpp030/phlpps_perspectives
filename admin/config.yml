@@ -115,6 +115,11 @@ collections:
             name: name
             widget: string
             hint: "Vollständiger Name"
+          - label: c/o (optional)
+            name: address_co
+            widget: string
+            required: false
+            hint: "z.B. 'c/o Mustermann' oder Institutionsname"
           - label: Adresse (Zeile 1)
             name: address_line1
             widget: string
