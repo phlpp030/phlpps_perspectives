@@ -1,6 +1,18 @@
 {
   "articles": [
     {
+      "slug": "visit-to-wehrmuehle",
+      "cover": "/fotos/dsc07711-3.jpeg",
+      "posted": "05.09.2026",
+      "date": "05.09.2026",
+      "tags": [
+        "art"
+      ],
+      "title": "a visit to wehrmuehle",
+      "excerpt": "After having this spot saved on Google Maps for quite some time, I took my bike and cycled all the way to Biesenthal and it was worthwhile indeed.",
+      "hero": "/fotos/dsc07711-3.jpeg"
+    },
+    {
       "excerpt": "I pushed myself to do some photowalks after regular 9-5 duty and between weekend relaxation and came across some interesting perspectives and berlin summer vibes.",
       "blocks": [
         {
