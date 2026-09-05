@@ -1,16 +1,47 @@
 {
   "articles": [
     {
+      "excerpt": "After having this spot saved on Google Maps for quite some time, I took my bike and cycled all the way to Biesenthal and it was worthwhile indeed.",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "I got a little special interest in artsy, dreamy and whimsical museums. "
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc07673.jpeg",
+              "caption": "having a quick smoking break"
+            },
+            {
+              "src": "/fotos/dsc07578.jpeg",
+              "caption": "deciphering "
+            },
+            {
+              "src": "/fotos/dsc07437.jpeg",
+              "caption": "wandering around"
+            },
+            {
+              "src": "/fotos/dsc07362.jpeg",
+              "caption": "foggy"
+            },
+            {
+              "src": "/fotos/dsc07697.jpeg",
+              "caption": "embedded"
+            }
+          ]
+        }
+      ],
       "slug": "visit-to-wehrmuehle",
-      "cover": "/fotos/dsc07711-3.jpeg",
-      "posted": "05.09.2026",
       "date": "05.09.2026",
+      "cover": "/fotos/dsc07711-3.jpeg",
+      "title": "a visit to wehrmuehle",
       "tags": [
         "art"
       ],
-      "title": "a visit to wehrmuehle",
-      "excerpt": "After having this spot saved on Google Maps for quite some time, I took my bike and cycled all the way to Biesenthal and it was worthwhile indeed.",
-      "hero": "/fotos/dsc07711-3.jpeg"
+      "hero": "/fotos/dsc07711-3.jpeg",
+      "posted": "05.09.2026"
     },
     {
       "excerpt": "I pushed myself to do some photowalks after regular 9-5 duty and between weekend relaxation and came across some interesting perspectives and berlin summer vibes.",
