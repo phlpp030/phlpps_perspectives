@@ -430,8 +430,22 @@
       .thumb-info {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 4px;
-        padding: 12px var(--article-inset) 0;
+        padding: 12px 0 0;
+        width: 100%;
+      }
+ 
+      .thumb-info .article-tags,
+      .thumb-info .article-date,
+      .thumb-info .thumb-headline {
+        width: auto;
+        align-self: flex-start;
+      }
+ 
+      .thumb-info .thumb-excerpt {
+        width: 100%;
+        align-self: stretch;
       }
  
       .thumb-headline {
