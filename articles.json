@@ -133,6 +133,53 @@
       "tag": "photowalk",
       "hero": "/fotos/dsc07293.jpeg",
       "posted": "31.08.2026"
+    },
+    {
+      "excerpt": "Continuing my series about cute little museums, I took the U3 to southwest Berlin and went to Haus am Waldsee. In close proximity to Grunewald and Krumme Lanke, there is a museum which kinda hit all the spots - excellent curation, nice interior, whimsical outdoor are and a very good café.",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "My relationship to southwest Berlin is a bit ambiguous. On the one hand, I was very glad moving out of this part of the city after living there for nearly four years. The long bus and S-Bahn rides were a pain in the ass and I never felt truly at home. In addition, it is a part of West-Berlin which does not really resonate with me. Steglitz looks a bit like an average West-German town and like Charlottenburg it seems to be a completely different world. In a way it is very much Berlin but at the same time it is not (at least from my point of view). But on the other hand, it is indeed very special how Berlin slowly transcends from metropolis to forests, lakes and nature in general.\n\nAn of course there are some (hidden) gems like the Liebermann Villa on the shores of Wannsee, there is the Brücke Museum, the Mexikoplatz, Krumme Lanke and Schlachtensee, Pfaueninsel and Haus am Waldsee. The latter is one of my favorite museums in Berlin due to the extraordinary combination of curation, interior, exterior and café. It ticks all the boxes. I came across this place 3 years ago in the context of 2023 Berlin Art Week and was immediately enchanted. Even though it is quite popular, the atmosphere remains very intimate and in my view this strengthens the experience of the displayed artworks. I am also a big fan of its niche and bespoke curations. 10/10 will always recommend ;-)"
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc08252.jpeg",
+              "caption": "full view of the historic building"
+            },
+            {
+              "src": "/fotos/dsc08232.jpeg",
+              "caption": "ensemble"
+            },
+            {
+              "src": "/fotos/dsc08195.jpeg",
+              "caption": "on the steps"
+            },
+            {
+              "src": "/fotos/dsc08140.jpeg",
+              "caption": "interior"
+            },
+            {
+              "src": "/fotos/dsc08190.jpeg",
+              "caption": "at the Waldsee"
+            },
+            {
+              "src": "/fotos/dsc08266.jpeg",
+              "caption": "trees"
+            }
+          ]
+        }
+      ],
+      "slug": "am-waldsee",
+      "date": "08.09.2026",
+      "cover": "/fotos/dsc08179.jpeg",
+      "title": "southwest berlin whimsy",
+      "tags": [
+        "art"
+      ],
+      "hero": "/fotos/dsc08179.jpeg",
+      "posted": "08.09.2026"
     }
   ]
 }
