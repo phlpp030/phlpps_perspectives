@@ -476,10 +476,11 @@
       /* Featured-Konzept entfällt auf Desktop — einheitliches Karten-Grid */
       .featured { display: none; }
  
-      /* Größere Karten: 3 statt 4 Spalten */
+      /* 4 Artikel nebeneinander, zentriert */
       .archive {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+        justify-content: center;
       }
  
       /* Tag-Overlay auf dem Bild ausblenden — Tag steht im Textblock (wie Mobile) */
