@@ -476,11 +476,17 @@
       /* Featured-Konzept entfällt auf Desktop — einheitliches Karten-Grid */
       .featured { display: none; }
  
-      /* 4 Artikel nebeneinander, zentriert */
+      /* 3 Artikel nebeneinander, größere Karten, zentriert (auch bei unvollständiger letzter Reihe) */
       .archive {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 28px;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 32px;
+      }
+ 
+      .archive-thumb {
+        flex: 0 0 calc((100% - 64px) / 3);
+        max-width: calc((100% - 64px) / 3);
       }
  
       /* Tag-Overlay auf dem Bild ausblenden — Tag steht im Textblock (wie Mobile) */
