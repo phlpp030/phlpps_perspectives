@@ -180,6 +180,66 @@
       ],
       "hero": "/fotos/dsc08179.jpeg",
       "posted": "08.09.2026"
+    },
+    {
+      "excerpt": "The search for some interesting scenes and something new besides my usual Kreuzberg or Neukölln photowalks led me to the infamous Wedding. My conclusion was rather positive. After taking some photos I came across an Aperol spritz and was quite happy with the little trip up north.",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Well, the Wedding… For the last twenty years people kept saying „der Wedding kommt“ referring to pre-gentrification state of this Bezirk and the long wait for another Prenzlauer Berg-ification or Neukölln-ification. I am not sure whether the Wedding should come and I really doubt whether the locals would benefit from it. Maybe the truth lies in the middle and the mix of working-class neighborhoods, migrant culture, old west-berlin charm next to the new-age listening bars and fine dining spaces is the way to go. I am not a sociologist or an expert concerning urbanism but I am in favor of diverse and mixed-up neighborhoods instead of monocultural areas. But to be honest, the gentrification and the price hikes have already hit this area and will continue to change the face of this part of Berlin. "
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc08683.jpeg",
+              "caption": "at the infamous Leopoldpatz"
+            },
+            {
+              "src": "/fotos/dsc08598.jpeg",
+              "caption": "Pankstr"
+            },
+            {
+              "src": "/fotos/dsc08568.jpeg",
+              "caption": "a curry wurst staple at Gesundbrunnen - strong recommendation"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "With this in mind I started my walk at Gesundbrunnen with a quick pit stop at Curry Baude, strolled north to Pankstraße and to Osloer Straße. Even though it reminded me of Neukölln, there is a completely different vibe and this is what I love about Berlin. I cannot really phrase it or narrow it down but it felt distinct and different.\n\nAfter crossing the small river Panke and crossed the Leopoldplatz. I stumbled upon fine dining restaurants, specialty coffee shops and creative agencies. So, there we are - in-between two worlds or in-between two different stages of Berlin development."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc08763.jpeg",
+              "caption": "fine dining institution Julius"
+            },
+            {
+              "src": "/fotos/dsc08712.jpeg",
+              "caption": "Silent Green - small green oasis"
+            },
+            {
+              "src": "/fotos/dsc08746.jpeg",
+              "caption": "reading at the park"
+            },
+            {
+              "src": "/fotos/dsc08778.jpeg",
+              "caption": "ring of fire"
+            }
+          ]
+        }
+      ],
+      "slug": "der-wedding-kommt",
+      "date": "23.09.2026",
+      "cover": "/fotos/dsc08750.jpeg",
+      "title": "der wedding kommt",
+      "tags": [
+        "Kiez"
+      ],
+      "hero": "/fotos/dsc08750.jpeg",
+      "posted": "23.09.2026"
     }
   ]
 }
