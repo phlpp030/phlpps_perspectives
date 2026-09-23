@@ -192,12 +192,12 @@
           "type": "carousel",
           "slides": [
             {
-              "src": "/fotos/dsc08683.jpeg",
-              "caption": "at the infamous Leopoldpatz"
-            },
-            {
               "src": "/fotos/dsc08598.jpeg",
               "caption": "Pankstr"
+            },
+            {
+              "src": "/fotos/dsc08683.jpeg",
+              "caption": "at the infamous Leopoldpatz"
             },
             {
               "src": "/fotos/dsc08568.jpeg",
