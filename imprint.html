@@ -11,23 +11,23 @@
   <style>
     @font-face { font-family:'Jost'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/jost-400.woff2') format('woff2'); }
     @font-face { font-family:'Jost'; font-style:normal; font-weight:800; font-display:swap; src:url('./fonts/jost-800.woff2') format('woff2'); }
-
+ 
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-
+ 
     :root {
       --bg: #F7F7F7; --ink: #131210; --muted: #9B9489;
       --accent: #6F60DD; --pad: 48px; --article-inset: 0px;
     }
-
+ 
     html, body {
       background: var(--bg);
       color: var(--ink);
       font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif;
       min-height: 100vh;
     }
-
+ 
     .page-wrap { max-width: 900px; margin: 0 auto; width: 100%; }
-
+ 
     /* ── Circle header ── */
     .article-header { display: flex; justify-content: center; padding: 36px 0 32px; }
     .article-header-circle {
@@ -36,14 +36,14 @@
       transition: transform .35s cubic-bezier(.34,1.56,.64,1);
     }
     .article-header-circle:hover { transform: scale(.88); }
-
+ 
     /* ── Content wrap ── */
     .content-wrap {
       max-width: 680px;
       margin: 0 auto;
       padding: 20px var(--pad) 80px;
     }
-
+ 
     /* ── Return ── */
     .article-return {
       display: block;
@@ -54,7 +54,7 @@
       margin-bottom: 44px;
     }
     .article-return:hover { color: var(--ink); }
-
+ 
     /* ── Page title ── */
     .page-title {
       font-size: clamp(28px, 5.5vw, 48px);
@@ -65,33 +65,33 @@
       color: var(--ink);
       margin-bottom: 52px;
     }
-
+ 
     /* ── Sections ── */
     .imprint-section { margin-bottom: 40px; }
-
+ 
     .section-label {
       font-size: 10px; font-weight: 700;
       letter-spacing: .12em; text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 12px;
     }
-
+ 
     p {
       font-size: 16px; font-weight: 400;
       line-height: 1.75; color: var(--ink);
       margin-bottom: 12px;
     }
-
+ 
     p:last-child { margin-bottom: 0; }
-
+ 
     .address-block {
       font-size: 16px; font-weight: 400;
       line-height: 1.9; color: var(--ink);
     }
-
+ 
     a.external { color: var(--accent); text-decoration: none; }
     a.external:hover { text-decoration: underline; }
-
+ 
     .placeholder {
       background: #ffe9b3;
       border-radius: 3px;
@@ -99,7 +99,17 @@
       font-style: italic;
       color: #7a5200;
     }
-
+ 
+    /* Verhindert kurzes Aufblitzen der Platzhalter vor dem Laden der Daten */
+    [data-dynamic] {
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+ 
+    [data-dynamic].loaded {
+      opacity: 1;
+    }
+ 
     /* ── Footer ── */
     .site-footer {
       display: grid;
@@ -114,7 +124,7 @@
     .footer-link:hover { color: var(--ink); }
     .footer-emoji { font-size: 28px; line-height: 1; user-select: none; }
     .footer-copy { font-size: 11px; font-weight: 400; letter-spacing: .05em; text-transform: lowercase; color: var(--muted); justify-self: start; }
-
+ 
     /* ── Responsive ── */
     @media (max-width: 760px) {
       :root { --article-inset: 16px; }
@@ -129,43 +139,43 @@
 </head>
 <body>
 <div class="page-wrap">
-
+ 
   <header class="article-header">
     <a href="index.html" class="article-header-circle" aria-label="Back to start"></a>
   </header>
-
+ 
   <main class="content-wrap">
-
+ 
     <a href="index.html" class="article-return">return</a>
-
+ 
     <h1 class="page-title">imprint</h1>
-
+ 
     <div class="imprint-section">
       <p class="section-label">Information according to § 5 DDG</p>
-      <p class="address-block">
+      <p class="address-block" data-dynamic>
         <span id="imprintName" class="placeholder">[Your Name]</span><br>
         <span id="imprintCo" class="placeholder">[c/o Name or Institution]</span><br>
         <span id="imprintAddr1" class="placeholder">[Street and Number]</span><br>
         <span id="imprintAddr2" class="placeholder">[Postcode City, Germany]</span>
       </p>
     </div>
-
+ 
     <div class="imprint-section">
       <p class="section-label">Contact</p>
-      <p>Email: <a id="imprintEmail" href="#" class="external placeholder">[your-email@example.com]</a></p>
+      <p data-dynamic>Email: <a id="imprintEmail" href="#" class="external placeholder">[your-email@example.com]</a></p>
     </div>
-
+ 
     <div class="imprint-section">
       <p class="section-label">Responsible for content</p>
       <p>According to § 18 Abs. 2 MStV:</p>
-      <p class="address-block">
+      <p class="address-block" data-dynamic>
         <span id="imprintResp" class="placeholder">[Your Name]</span><br>
         <span id="imprintCob" class="placeholder">[c/o Name or Institution]</span><br>
         <span id="imprintAddr1b" class="placeholder">[Street and Number]</span><br>
         <span id="imprintAddr2b" class="placeholder">[Postcode City, Germany]</span>
       </p>
     </div>
-
+ 
     <div class="imprint-section">
       <p class="section-label">Disclaimer</p>
       <p>
@@ -174,9 +184,9 @@
         All content on this website is created for personal, non-commercial purposes.
       </p>
     </div>
-
+ 
   </main>
-
+ 
   <footer class="site-footer">
     <div class="footer-left">
       <a href="privacy.html" class="footer-link">privacy</a>
@@ -185,9 +195,13 @@
     <span class="footer-emoji">💌</span>
     <span class="footer-copy">© 2026 phlpp</span>
   </footer>
-
+ 
 </div>
 <script>
+  function revealDynamic() {
+    document.querySelectorAll('[data-dynamic]').forEach(el => el.classList.add('loaded'));
+  }
+ 
   fetch('./imprint.json')
     .then(r => r.json())
     .then(d => {
@@ -204,7 +218,7 @@
         el.href = `mailto:${val}`;
         el.classList.remove('placeholder');
       };
-
+ 
       setText('imprintName',  d.name);
       setText('imprintCo',    d.address_co);
       setText('imprintAddr1', d.address_line1);
@@ -215,7 +229,8 @@
       setText('imprintAddr1b', d.address_line1);
       setText('imprintAddr2b', d.address_line2);
     })
-    .catch(() => {});
+    .catch(() => {})
+    .finally(revealDynamic);
 </script>
 </body>
 </html>
