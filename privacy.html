@@ -1,3 +1,5 @@
+
+Privacy · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +13,23 @@
   <style>
     @font-face { font-family:'Jost'; font-style:normal; font-weight:400; font-display:swap; src:url('./fonts/jost-400.woff2') format('woff2'); }
     @font-face { font-family:'Jost'; font-style:normal; font-weight:800; font-display:swap; src:url('./fonts/jost-800.woff2') format('woff2'); }
-
+ 
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-
+ 
     :root {
       --bg: #F7F7F7; --ink: #131210; --muted: #9B9489;
       --accent: #6F60DD; --pad: 48px; --article-inset: 0px;
     }
-
+ 
     html, body {
       background: var(--bg);
       color: var(--ink);
       font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif;
       min-height: 100vh;
     }
-
+ 
     .page-wrap { max-width: 900px; margin: 0 auto; width: 100%; }
-
+ 
     /* ── Circle header ── */
     .article-header { display: flex; justify-content: center; padding: 36px 0 32px; }
     .article-header-circle {
@@ -36,14 +38,14 @@
       transition: transform .35s cubic-bezier(.34,1.56,.64,1);
     }
     .article-header-circle:hover { transform: scale(.88); }
-
+ 
     /* ── Content wrap ── */
     .content-wrap {
       max-width: 680px;
       margin: 0 auto;
       padding: 20px var(--pad) 80px;
     }
-
+ 
     /* ── Return ── */
     .article-return {
       display: block;
@@ -54,7 +56,7 @@
       margin-bottom: 44px;
     }
     .article-return:hover { color: var(--ink); }
-
+ 
     /* ── Page title ── */
     .page-title {
       font-size: clamp(28px, 5.5vw, 48px);
@@ -65,36 +67,36 @@
       color: var(--ink);
       margin-bottom: 8px;
     }
-
+ 
     .page-updated {
       font-size: 12px; font-weight: 400;
       letter-spacing: .06em; text-transform: lowercase;
       color: var(--muted);
       margin-bottom: 52px;
     }
-
+ 
     /* ── Sections ── */
     .privacy-section { margin-bottom: 40px; }
-
+ 
     .section-label {
       font-size: 10px; font-weight: 700;
       letter-spacing: .12em; text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 12px;
     }
-
+ 
     p {
       font-size: 16px; font-weight: 400;
       line-height: 1.75; color: var(--ink);
       margin-bottom: 12px;
     }
-
+ 
     ul {
       margin: 0 0 12px 0;
       padding: 0;
       list-style: none;
     }
-
+ 
     ul li {
       font-size: 16px; font-weight: 400;
       line-height: 1.75; color: var(--ink);
@@ -102,20 +104,20 @@
       position: relative;
       margin-bottom: 4px;
     }
-
+ 
     ul li::before {
       content: '—';
       position: absolute;
       left: 0;
       color: var(--muted);
     }
-
+ 
     a.external {
       color: var(--accent);
       text-decoration: none;
     }
     a.external:hover { text-decoration: underline; }
-
+ 
     /* ── Placeholder styling ── */
     .placeholder {
       background: #ffe9b3;
@@ -124,7 +126,17 @@
       font-style: italic;
       color: #7a5200;
     }
-
+ 
+    /* Verhindert kurzes Aufblitzen der Platzhalter vor dem Laden der Daten */
+    [data-dynamic] {
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+ 
+    [data-dynamic].loaded {
+      opacity: 1;
+    }
+ 
     /* ── Footer ── */
     .site-footer {
       display: grid;
@@ -139,7 +151,7 @@
     .footer-link:hover { color: var(--ink); }
     .footer-emoji { font-size: 28px; line-height: 1; user-select: none; }
     .footer-copy { font-size: 11px; font-weight: 400; letter-spacing: .05em; text-transform: lowercase; color: var(--muted); justify-self: start; }
-
+ 
     /* ── Responsive ── */
     @media (max-width: 760px) {
       :root { --article-inset: 16px; }
@@ -156,28 +168,28 @@
 </head>
 <body>
 <div class="page-wrap">
-
+ 
   <header class="article-header">
     <a href="index.html" class="article-header-circle" aria-label="Back to start"></a>
   </header>
-
+ 
   <main class="content-wrap">
-
+ 
     <a href="index.html" class="article-return">return</a>
-
+ 
     <h1 class="page-title">privacy policy</h1>
     <p class="page-updated">last updated: june 2026</p>
-
+ 
     <div class="privacy-section">
       <p class="section-label">1. controller</p>
-      <p>
+      <p data-dynamic>
         The controller responsible for data processing on this website within the meaning of the
         General Data Protection Regulation (GDPR) is:<br><br>
         <span class="placeholder" id="privacyName">[Your Name]</span><br>
         <span class="placeholder" id="privacyEmail1">[your-email@example.com]</span>
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">2. hosting</p>
       <p>
@@ -199,7 +211,7 @@
         <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener" class="external">netlify.com/privacy</a>.
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">3. fonts</p>
       <p>
@@ -207,7 +219,7 @@
         server. No data is transferred to third parties when the font is loaded.
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">4. cookies</p>
       <p>
@@ -215,7 +227,7 @@
         what is technically necessary for the page to load.
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">5. analytics and tracking</p>
       <p>
@@ -223,7 +235,7 @@
         monitoring technologies. Your browsing behaviour on this site is not recorded.
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">6. external links</p>
       <p>
@@ -232,7 +244,7 @@
         data processing practices of external websites.
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">7. admin area</p>
       <p>
@@ -241,7 +253,7 @@
         to the public website are not affected by this.
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">8. your rights</p>
       <p>Under the GDPR, you have the following rights regarding your personal data:</p>
@@ -253,12 +265,12 @@
         <li>Right to data portability — Art. 20 GDPR</li>
         <li>Right to object — Art. 21 GDPR</li>
       </ul>
-      <p>
+      <p data-dynamic>
         To exercise any of these rights, please contact us at
         <span class="placeholder" id="privacyEmail2">[your-email@example.com]</span>.
       </p>
     </div>
-
+ 
     <div class="privacy-section">
       <p class="section-label">9. right to lodge a complaint</p>
       <p>
@@ -269,9 +281,9 @@
         <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener" class="external">bfdi.bund.de</a>.
       </p>
     </div>
-
+ 
   </main>
-
+ 
   <footer class="site-footer">
     <div class="footer-left">
       <a href="/privacy.html" class="footer-link">privacy</a>
@@ -280,9 +292,13 @@
     <span class="footer-emoji">💌</span>
     <span class="footer-copy">© 2026 phlpp</span>
   </footer>
-
+ 
 </div>
 <script>
+  function revealDynamic() {
+    document.querySelectorAll('[data-dynamic]').forEach(el => el.classList.add('loaded'));
+  }
+ 
   fetch('./privacy.json')
     .then(r => r.json())
     .then(data => {
@@ -298,7 +314,8 @@
         el.classList.remove('placeholder');
       });
     })
-    .catch(() => {});
+    .catch(() => {})
+    .finally(revealDynamic);
 </script>
 </body>
 </html>
