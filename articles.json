@@ -244,6 +244,91 @@
       ],
       "hero": "/fotos/dsc08750.jpeg",
       "posted": "23.09.2026"
+    },
+    {
+      "excerpt": "September is Berlin Art Week time and especially Positions Art Fair is the place to be, when it comes to indulging in various art and to do some people watching.",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "I am not an artist and I am not very connected to the art scene in general, but I really enjoy visiting a well-curated gallery or an architecturally sophisticated museum. Absorbing artworks and being in aesthetically pleasing spaces is a quite important source of inspiration for me. Therefore and due to the fact that I am haunted by social anxiety, Berlin Art Week comes in handy because of the easy access to snobby galleries and the special formats, like guided tours etc.. Especially the latter proved to be worthwhile and insightful. Additionally it is very important to avoid over-pacing and putting too many spots on the agenda. Do not underestimate the size of Berlin when it comes to having a \"quick“ walk from one place to another."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc08958.jpeg",
+              "caption": "people looking at art I"
+            },
+            {
+              "src": "/fotos/dsc08923.jpeg",
+              "caption": "collector's glasses"
+            },
+            {
+              "src": "/fotos/dsc08929.jpeg",
+              "caption": "composition"
+            },
+            {
+              "src": "/fotos/dsc08942.jpeg",
+              "caption": "people looking at art II"
+            },
+            {
+              "src": "/fotos/dsc08933.jpeg",
+              "caption": "stacked"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "This year I ended up at Positions Art Fair in the old Tempelhof airport, which is always a highlight because of the high density of works and more or less \"artsy“ people. It is a place to absorb the atmosphere and to mingle with the crowd. This year there were only a few positions, that resonated with me.\n\nSecond point an my agenda was a tour along Leipziger Strasse which is not only a larger than life reminiscence of the good old socialist days but also housing some little galleries. "
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc08986.jpeg",
+              "caption": "orientation"
+            },
+            {
+              "src": "/fotos/dsc09005.jpeg",
+              "caption": "transparent"
+            },
+            {
+              "src": "/fotos/dsc08993.jpeg",
+              "caption": "people looking at art III"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "To finish my art week visit, I ended up in Mitte on Augustrasse - where else. As described in another article, the Bermuda triangle of Auguststrasse and Linienstrasse is also stacked with galleries and seems like a little parallel universe in the heart of Berlin. "
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc08818.jpeg",
+              "caption": "taking a break from art"
+            },
+            {
+              "src": "/fotos/dsc08795.jpeg",
+              "caption": "objects"
+            },
+            {
+              "src": "/fotos/dsc08797.jpeg",
+              "caption": "bookstore"
+            }
+          ]
+        }
+      ],
+      "slug": "art-week-maxxing",
+      "date": "30.09.2026",
+      "cover": "/fotos/dsc08974.jpeg",
+      "title": "art week maxxing",
+      "tags": [
+        "art"
+      ],
+      "hero": "/fotos/dsc08974.jpeg",
+      "posted": "30.09.2026"
     }
   ]
 }
