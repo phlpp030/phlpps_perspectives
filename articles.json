@@ -329,6 +329,78 @@
       ],
       "hero": "/fotos/dsc08974.jpeg",
       "posted": "30.09.2026"
+    },
+    {
+      "excerpt": "There is a short period in-between late summer and early fall, when Berlin turns golden and leads the Berliners to believe, that summer is not over and winter will not be as cruel. You have to enjoy this time to the fullest.",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Fall is my favorite time of the year. As my birthday is in October, I feel deeply connected to this season and I really enjoy the beginning of the transition process, which will ultimately lead to a cold Berlin winter. The latter has to be put aside for now, as I want to focus on the more warm and more pleasant part of fall. Crunchy leaves and fall foliage are quite magical, and you can really sense a certain crispness in the air as it gets a bit chilly as well as windy. It’s time to dress up in a cozy way and enjoy the last bits of summer, before Berlin turns the lever and it gets grey and gloomy."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc09079.jpeg",
+              "caption": "produce"
+            },
+            {
+              "src": "/fotos/dsc09173.jpeg",
+              "caption": "flowers"
+            },
+            {
+              "src": "/fotos/dsc09147.jpeg",
+              "caption": "golden leaves"
+            },
+            {
+              "src": "/fotos/dsc09066.jpeg",
+              "caption": "passing by"
+            },
+            {
+              "src": "/fotos/dsc09146.jpeg",
+              "caption": "negotiations "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "My first photowalk led me to the god old farmers market at Boxi, which is a household name and always worthwhile. It has become quite a rendezvous point for granola moms from Friedrichshain and the usual Berlin hipsters, who have gentrified this part of Berlin, which was once a blue-collar neighborhood. Nevertheless, as I don’t want to sound rude, it is a nice mix of people, I recommend getting some sourdough bread from KEIT and restocking fresh produce from local farmers."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc09079-1.jpg",
+              "caption": "altbau meets autumn"
+            },
+            {
+              "src": "/fotos/dsc09058.jpeg",
+              "caption": "color palette"
+            },
+            {
+              "src": "/fotos/dsc09091.jpeg",
+              "caption": "at the usual Kreuzkölln hangout spots"
+            },
+            {
+              "src": "/fotos/dsc09214.jpeg",
+              "caption": "at Körnerpark"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "For the second photowalk, I chose one of my favorite routes from Schlesisches Tor to Körnerpark, which is indeed a long haul, but there are so many nice spaces, places and details along the way. "
+        }
+      ],
+      "slug": "from-gold-to-grey",
+      "date": "19.10.2026",
+      "cover": "/fotos/dsc09025-1.jpg",
+      "title": "before berlin shifts from gold to grey",
+      "tags": [
+        "photowalk"
+      ],
+      "hero": "/fotos/dsc09025.jpeg",
+      "posted": "19.10.2026"
     }
   ]
 }
