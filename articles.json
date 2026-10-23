@@ -217,12 +217,12 @@
           "type": "carousel",
           "slides": [
             {
-              "src": "/fotos/dsc08763.jpeg",
-              "caption": "fine dining institution Julius"
-            },
-            {
               "src": "/fotos/dsc08712.jpeg",
               "caption": "Silent Green - small green oasis"
+            },
+            {
+              "src": "/fotos/dsc08763.jpeg",
+              "caption": "fine dining institution Julius"
             },
             {
               "src": "/fotos/dsc08746.jpeg",
