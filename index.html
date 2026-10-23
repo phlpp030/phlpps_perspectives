@@ -549,7 +549,7 @@
         align-items: center;
         padding: 14px var(--pad) 14px;
         position: sticky;
-        top: 0;
+        top: var(--header-h, 0px);
         background: var(--bg);
         z-index: 50;
       }
@@ -721,6 +721,15 @@
       }
       subtitle.style.fontSize = lo + 'px';
     }
+ 
+    // Desktop: Menüleiste klebt direkt unter dem (ebenfalls fixierten) Header
+    function setHeaderH() {
+      const hd = document.getElementById('siteHeader');
+      if (hd) document.documentElement.style.setProperty('--header-h', hd.offsetHeight + 'px');
+    }
+    setHeaderH();
+    document.fonts.ready.then(setHeaderH);
+    window.addEventListener('resize', setHeaderH);
  
     document.fonts.ready.then(sizeSubtitle);
     window.addEventListener('resize', sizeSubtitle);
