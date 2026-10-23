@@ -547,8 +547,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 8px var(--pad) 0;
-        position: relative;
+        padding: 14px var(--pad) 14px;
+        position: sticky;
+        top: 0;
+        background: var(--bg);
         z-index: 50;
       }
       .menu-right { display: flex; gap: 40px; }
@@ -833,7 +835,9 @@
  
       function update() {
         const shown = list.filter(matches);
-        renderArchive(shown);
+        // Karten nur ein-/ausblenden statt neu aufbauen → Bilder flackern nicht
+        const cards = document.getElementById('archiveGrid').children;
+        list.forEach((a, i) => { if (cards[i]) cards[i].style.display = matches(a) ? '' : 'none'; });
         btn.textContent = 'filter' + (sel.length ? ' (' + sel.length + ')' : '');
         btn.classList.toggle('active', open || sel.length > 0);
         btn.setAttribute('aria-expanded', open);
