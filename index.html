@@ -539,87 +539,115 @@
       }
     }
  
-    /* ── Menüleiste (nur Desktop; auf Mobile komplett ausgeblendet) ── */
-    .menu-band { display: none; }
+    /* ── Menüleiste (Desktop: filter links, Links rechts · Mobile: menu links, filter rechts) ── */
+    .menu-band {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 calc(var(--pad) + var(--article-inset)) 12px;
+      position: sticky;
+      top: var(--header-h, 0px);
+      background: var(--bg);
+      z-index: 50;
+    }
+    .menu-item {
+      font-family: inherit;
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: .01em;
+      text-transform: lowercase;
+      color: var(--ink);
+      text-decoration: none;
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: color .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .menu-item:hover,
+    .menu-item.active { color: var(--accent); }
+    .menu-ico { width: 18px; height: 18px; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; fill: none; }
+    .filter-wrap, .menu-wrap { position: relative; }
+    .menu-wrap { order: -1; }
+ 
+    .filter-panel, .menu-links {
+      position: absolute;
+      top: calc(100% + 10px);
+      background: #fff;
+      border: .5px solid rgba(19,18,16,.14);
+      border-radius: 10px;
+      padding: 10px 13px;
+      display: none;
+    }
+    .filter-panel { right: 0; width: 214px; }
+    .menu-links { left: 0; min-width: 110px; flex-direction: column; gap: 6px; }
+    .filter-panel.open { display: block; }
+    .menu-links.open { display: flex; }
+    .menu-desk { display: none; }
+    .menu-links .menu-item { font-size: 17px; line-height: 1.3; }
+ 
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+    .pill {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: .02em;
+      line-height: 1.35;
+      text-transform: lowercase;
+      color: var(--ink);
+      background: #E5E3E0;
+      border: 0;
+      border-radius: 20px;
+      padding: 0 8px;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease;
+    }
+    .pill.on { background: var(--accent); color: #fff; }
+    .filter-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .filter-clear {
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--muted);
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: color .2s ease;
+    }
+    .filter-clear:hover { color: var(--accent); }
  
     @media (min-width: 761px) {
-      .menu-band {
+      .menu-band { padding: 0 var(--pad) 14px; }
+      .menu-item { font-size: 20px; }
+      .menu-ico, .menu-toggle { display: none; }
+      .menu-desk { display: inline-flex; }
+      .menu-wrap { order: 0; }
+      .menu-links, .menu-links.open {
+        position: static;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 var(--pad) 14px;
-        position: sticky;
-        top: var(--header-h, 0px);
-        background: var(--bg);
-        z-index: 50;
-      }
-      .menu-right { display: flex; gap: 40px; }
-      .menu-item {
-        font-family: inherit;
-        font-size: 20px;
-        font-weight: 400;
-        letter-spacing: .01em;
-        text-transform: lowercase;
-        color: var(--ink);
-        text-decoration: none;
+        flex-direction: row;
+        gap: 40px;
         background: none;
         border: 0;
         padding: 0;
-        cursor: pointer;
-        transition: color .2s ease;
+        min-width: 0;
       }
-      .menu-item:hover,
-      .menu-item.active { color: var(--accent); }
- 
-      .filter-wrap { position: relative; }
-      .filter-panel {
-        position: absolute;
-        top: calc(100% + 12px);
-        left: 0;
-        width: 290px;
-        background: #fff;
-        border: .5px solid rgba(19,18,16,.14);
-        border-radius: 10px;
-        padding: 16px;
-        box-shadow: 0 8px 28px rgba(19,18,16,.08);
-        display: none;
-      }
-      .filter-panel.open { display: block; }
-      .filter-pills { display: flex; flex-wrap: wrap; gap: 7px; }
-      .pill {
-        font-family: inherit;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: .07em;
-        text-transform: lowercase;
-        color: var(--ink);
-        background: rgba(220,218,214,.68);
-        border: 0;
-        border-radius: 20px;
-        padding: 3px 12px;
-        cursor: pointer;
-        transition: background .2s ease, color .2s ease;
-      }
-      .pill.on { background: var(--accent); color: #fff; }
-      .filter-foot {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 14px;
-        font-size: 13px;
-        color: var(--muted);
-      }
-      .filter-clear {
-        font-family: inherit;
-        font-size: 13px;
-        color: var(--muted);
-        background: none;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        transition: color .2s ease;
-      }
-      .filter-clear:hover { color: var(--accent); }
+      .menu-links .menu-item { font-size: 20px; line-height: normal; }
+      .filter-panel { right: auto; left: 0; width: 290px; top: calc(100% + 12px); padding: 16px; box-shadow: 0 8px 28px rgba(19,18,16,.08); }
+      .filter-pills { gap: 7px; }
+      .pill { font-size: 12px; font-weight: 600; letter-spacing: .07em; background: rgba(220,218,214,.68); padding: 3px 12px; line-height: normal; }
+      .pill.on { background: var(--accent); }
+      .filter-foot { margin-top: 14px; }
     }
   </style>
 </head>
@@ -643,7 +671,9 @@
  
   <nav class="menu-band" aria-label="menu">
     <div class="filter-wrap">
-      <button type="button" class="menu-item" id="filterBtn" aria-expanded="false" aria-controls="filterPanel">filter</button>
+      <button type="button" class="menu-item" id="filterBtn" aria-expanded="false" aria-controls="filterPanel">
+        <svg class="menu-ico" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M4.5 9h9M7 13.5h4"/></svg><span id="filterLabel">filter</span>
+      </button>
       <div class="filter-panel" id="filterPanel" role="dialog" aria-label="filter by tag">
         <div class="filter-pills" id="filterPills"></div>
         <div class="filter-foot">
@@ -652,10 +682,15 @@
         </div>
       </div>
     </div>
-    <div class="menu-right">
-      <a class="menu-item" href="/construction.html" id="menuNewsletter">newsletter</a>
-      <a class="menu-item" href="https://www.instagram.com/___phlpp/" target="_blank" rel="noopener">instagram</a>
-      <a class="menu-item" href="/construction.html" id="menuAbout">about</a>
+    <div class="menu-wrap">
+      <button type="button" class="menu-item menu-toggle" id="menuBtn" aria-expanded="false" aria-controls="menuLinks">
+        <svg class="menu-ico" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14"/></svg><span>menu</span>
+      </button>
+      <div class="menu-links" id="menuLinks">
+        <a class="menu-item menu-desk" href="/construction.html">newsletter</a>
+        <a class="menu-item" href="https://www.instagram.com/___phlpp/" target="_blank" rel="noopener">instagram</a>
+        <a class="menu-item" href="/construction.html">about</a>
+      </div>
     </div>
   </nav>
  
@@ -725,11 +760,12 @@
     // Desktop: Menüleiste klebt direkt unter dem (ebenfalls fixierten) Header
     function setHeaderH() {
       const hd = document.getElementById('siteHeader');
-      if (hd) document.documentElement.style.setProperty('--header-h', hd.offsetHeight + 'px');
+      if (hd) document.documentElement.style.setProperty('--header-h', hd.getBoundingClientRect().height + 'px');
     }
     setHeaderH();
     document.fonts.ready.then(setHeaderH);
     window.addEventListener('resize', setHeaderH);
+    if (window.ResizeObserver) new ResizeObserver(setHeaderH).observe(document.getElementById('siteHeader'));
  
     document.fonts.ready.then(sizeSubtitle);
     window.addEventListener('resize', sizeSubtitle);
@@ -847,7 +883,7 @@
         // Karten nur ein-/ausblenden statt neu aufbauen → Bilder flackern nicht
         const cards = document.getElementById('archiveGrid').children;
         list.forEach((a, i) => { if (cards[i]) cards[i].style.display = matches(a) ? '' : 'none'; });
-        btn.textContent = 'filter' + (sel.length ? ' (' + sel.length + ')' : '');
+        document.getElementById('filterLabel').textContent = 'filter' + (sel.length ? ' (' + sel.length + ')' : '');
         btn.classList.toggle('active', open || sel.length > 0);
         btn.setAttribute('aria-expanded', open);
         panel.classList.toggle('open', open);
@@ -865,7 +901,12 @@
         update();
       });
       clearBtn.addEventListener('click', () => { sel = []; update(); });
-      btn.addEventListener('click', () => { open = !open; update(); });
+      btn.addEventListener('click', () => {
+        open = !open;
+        if (open) document.dispatchEvent(new Event('filter-opened'));
+        update();
+      });
+      document.addEventListener('menu-opened', () => { if (open) { open = false; update(); } });
       document.addEventListener('click', e => {
         if (open && !e.target.closest('.filter-wrap')) { open = false; update(); }
       });
@@ -873,6 +914,27 @@
         if (e.key === 'Escape' && open) { open = false; update(); }
       });
       update();
+    }
+ 
+    // Mobile: "menu" klappt about + instagram auf
+    function initMenu() {
+      const btn = document.getElementById('menuBtn');
+      const links = document.getElementById('menuLinks');
+      if (!btn || !links) return;
+      let open = false;
+      const set = v => {
+        open = v;
+        links.classList.toggle('open', v);
+        btn.classList.toggle('active', v);
+        btn.setAttribute('aria-expanded', v);
+      };
+      btn.addEventListener('click', () => {
+        set(!open);
+        if (open) document.dispatchEvent(new Event('menu-opened'));
+      });
+      document.addEventListener('filter-opened', () => set(false));
+      document.addEventListener('click', e => { if (open && !e.target.closest('.menu-wrap')) set(false); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) set(false); });
     }
  
     fetch('./articles.json')
@@ -886,8 +948,9 @@
           renderMobileFeed(list);
         } else {
           renderArchive(list);
-          initFilter(list);
         }
+        initFilter(list);
+        initMenu();
       })
       .catch(err => console.warn('articles.json nicht gefunden:', err));
   </script>
