@@ -405,6 +405,78 @@
       ],
       "hero": "/fotos/dsc09025.jpeg",
       "posted": "19.10.2026"
+    },
+    {
+      "excerpt": "The omnipresence of South Korea in movies, pop culture and innumerable reels on Instagram pushed it to the top of my travel bucket list. The first impressions of Seoul quickly led to a „should I live here“ train of thought.",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "I am actually not sure, what kind of travel report and which insights I would like to share. So let’s see, where this goes and I also want to use this little blog to reflect on my experiences and impressions. After spending most of late summer in Berlin and taking pictures all around my usual photo spots, I was actually quite desperate to get some new input and find some new motives in a completely different environment."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc09298.jpeg",
+              "caption": "street scenery in jongno"
+            },
+            {
+              "src": "/fotos/dsc09425.jpeg",
+              "caption": "boot café - a café you can visit in Paris and in Seoul"
+            },
+            {
+              "src": "/fotos/dsc09325.jpeg",
+              "caption": "backstreets"
+            },
+            {
+              "src": "/fotos/dsc09330.jpeg",
+              "caption": "table is set"
+            },
+            {
+              "src": "/fotos/dsc09341.jpeg",
+              "caption": "cannot get enough of the Korean letters"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "On the first day, we went to the neighborhoods of Jongno and Seochon. Especially the former was lately hailed as the coolest neighborhood in the world by various media outlets. I would disagree, even though it was a good entry point to explore the city. At the heart of Jongno is a food market, which was from my point of view a bit too overcrowded and the shop owners went a bit too far using generative AI. But Seochon on the other hand is a quite dynamic space with cute little cafés and shops. It is also a great place to do some people watching and grasping the urban vibe as well as the locals’ style. "
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/dsc09518.jpeg",
+              "caption": "date night"
+            },
+            {
+              "src": "/fotos/dsc09516.jpeg",
+              "caption": "at per natural wine bar"
+            },
+            {
+              "src": "/fotos/dsc09505.jpeg",
+              "caption": "lights"
+            },
+            {
+              "src": "/fotos/dsc09523.jpeg",
+              "caption": "dinner"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "The hunt for dinner led us to Euljiro, where we were thrown right into the Korean BBQ culture with freshly roasted meat and numerous side dishes. After being well fed, we found a very hip natty wine bar, where we had a good bottle of Korean wine after overcoming some language barriers. After completing the gentrification trifecta of specialty coffee, natural wine and concept stores, we called it a day. "
+        }
+      ],
+      "slug": "first-steps-seoul",
+      "date": "25.10.2026",
+      "cover": "/fotos/dsc09326.jpg",
+      "title": "first steps in seoul",
+      "tags": [
+        "rambling"
+      ],
+      "hero": "/fotos/dsc09326.jpeg",
+      "posted": "25.10.2026"
     }
   ]
 }
