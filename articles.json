@@ -479,16 +479,55 @@
       "posted": "25.10.2026"
     },
     {
+      "excerpt": "When in Seoul, you must not miss the landmark views and the viral spots and must not forget, that this often means long walks and steep hills.",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "After a very grey and rainy day, we decided to use the regained freedom from carrying around umbrellas and looking for shelters aka cafés and stores, to continue out sightseeing tour. The first attempt to get a nice shot of Namsan tower from a quite viral photo spot ended in utter frustration because of severe backlighting. But there is always a second chance we got an eye on this landmark monument from the steep backstreets of Itaewon. This day we climbed up roughly 90 stories according to the Apple health app. "
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/namsan-6.jpg",
+              "caption": "vacant chairs"
+            },
+            {
+              "src": "/fotos/namsan-9.jpg",
+              "caption": "backstreet views"
+            },
+            {
+              "src": "/fotos/namsan-4.jpg",
+              "caption": "googly-eyed buses"
+            },
+            {
+              "src": "/fotos/namsan-7.jpg",
+              "caption": "mascots"
+            },
+            {
+              "src": "/fotos/namsan-8.jpg",
+              "caption": "steep"
+            },
+            {
+              "src": "/fotos/namsan-5.jpg",
+              "caption": "bespoke wine selection"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Climbing up Namsan mountain on a narrow hiking trail and rushing to the top of the tower by elevator led us to a really breathtaking view of Seoul and the metropolitan area. There was almost no end to this gigantic city and everywhere you look, you could spot white high rise buildings, highways and rails. To digest the impressions, we decided to go to a vinyl café, where you could enjoy an iced coffee with thick cream and some mellow tunes. I had this spot on my map for quit some years after coming across it on Instagram and ended up being one of three yuppie guys, taking photos of the location with a very sophisticated camera. What a day."
+        }
+      ],
       "slug": "view-points-etc",
+      "date": "08.11.2026",
+      "cover": "/fotos/namsan-1.jpg",
       "title": "view points and other ViRaL spots",
       "tags": [
         "out&about"
       ],
-      "date": "08.11.2026",
-      "posted": "08.11.2026",
-      "excerpt": "When in Seoul, you must not miss the landmark views and the viral spots and must not forget, that this often means long walks and steep hills.",
-      "cover": "/fotos/namsan-1.jpg",
-      "hero": "/fotos/namsan-2.jpg"
+      "hero": "/fotos/namsan-2.jpg",
+      "posted": "08.11.2026"
     }
   ]
 }
