@@ -523,7 +523,11 @@
           "slides": [
             {
               "src": "/fotos/sterephonic-sound-1.jpg",
-              "caption": "stereophonic sound café"
+              "caption": "stereophonic sound cafe"
+            },
+            {
+              "src": "/fotos/sterephonic-sound-2.jpg",
+              "caption": "barista"
             }
           ]
         }
