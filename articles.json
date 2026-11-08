@@ -517,6 +517,15 @@
         {
           "type": "text",
           "content": "Climbing up Namsan mountain on a narrow hiking trail and rushing to the top of the tower by elevator led us to a really breathtaking view of Seoul and the metropolitan area. There was almost no end to this gigantic city and everywhere you look, you could spot white high rise buildings, highways and rails. To digest the impressions, we decided to go to a vinyl café, where you could enjoy an iced coffee with thick cream and some mellow tunes. I had this spot on my map for quit some years after coming across it on Instagram and ended up being one of three yuppie guys, taking photos of the location with a very sophisticated camera. What a day."
+        },
+        {
+          "type": "carousel",
+          "slides": [
+            {
+              "src": "/fotos/sterephonic-sound-1.jpg",
+              "caption": "stereophonic sound café"
+            }
+          ]
         }
       ],
       "slug": "view-points-etc",
