@@ -477,6 +477,18 @@
       ],
       "hero": "/fotos/dsc09326.jpeg",
       "posted": "25.10.2026"
+    },
+    {
+      "slug": "view-points-etc",
+      "title": "view points and other ViRaL spots",
+      "tags": [
+        "out&about"
+      ],
+      "date": "08.11.2026",
+      "posted": "08.11.2026",
+      "excerpt": "When in Seoul, you must not miss the landmark views and the viral spots and must not forget, that this often means long walks and steep hills.",
+      "cover": "/fotos/namsan-1.jpg",
+      "hero": "/fotos/namsan-2.jpg"
     }
   ]
 }
